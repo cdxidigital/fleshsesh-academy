@@ -57,7 +57,7 @@ const LandingPage = () => {
             period: 'forever',
             description: 'Start your journey with foundational lessons',
             features: [
-                'Access to Level 1 (100 lessons)',
+                'Access to Level 1 (50 lessons)',
                 'Basic progress tracking',
                 'Community forum access',
                 '5 AI simulations per month',
@@ -72,7 +72,7 @@ const LandingPage = () => {
             period: 'per month',
             description: 'Unlock deeper skills and personalized coaching',
             features: [
-                'All 10 levels (1000 lessons)',
+                'All 10 levels (500 lessons)',
                 'Unlimited AI simulations',
                 'Personalized learning path',
                 'AI instructor chat sessions',
@@ -135,7 +135,7 @@ const LandingPage = () => {
                     </h1>
                     
                     <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10">
-                        1000+ lessons across 10 levels. AI instructors. Personalized simulations. 
+                        500+ lessons across 10 levels. AI instructors. Personalized simulations. 
                         Transform your confidence, attraction, and relationships.
                     </p>
                     
@@ -169,8 +169,8 @@ const LandingPage = () => {
                     {/* Stats */}
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { value: '1000+', label: 'Lessons', icon: BookOpen },
-                            { value: '500+', label: 'Simulations', icon: Play },
+                            { value: '500+', label: 'Lessons', icon: BookOpen },
+                            { value: '250+', label: 'Simulations', icon: Play },
                             { value: '10', label: 'Mastery Levels', icon: Trophy },
                             { value: '8', label: 'AI Faculty', icon: Users }
                         ].map((stat, i) => (
