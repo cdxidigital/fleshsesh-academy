@@ -1,34 +1,162 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+/* Fleshsesh Academy Custom Styles */
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    background-color: #09050A;
+}
+
+/* Hero section background */
+.hero-bg {
+    background-image: url('https://images.pexels.com/photos/1910229/pexels-photo-1910229.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Instructor card styles */
+.instructor-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.instructor-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to top, #09050A, transparent);
+    z-index: 1;
+}
+
+.instructor-card img {
+    transition: transform 0.5s ease;
+}
+
+.instructor-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Pricing card highlight */
+.pricing-highlight {
+    position: relative;
+}
+
+.pricing-highlight::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #E6005C, #FFB3D1, #E6005C);
+    border-radius: 1.1rem;
+    z-index: -1;
+    animation: gradient-rotate 3s linear infinite;
+}
+
+@keyframes gradient-rotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Course card styles */
+.course-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card .course-image {
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-image {
+    transform: scale(1.1);
+}
+
+/* Progress bar animation */
+.progress-bar-fill {
+    transition: width 0.5s ease;
+}
+
+/* XP gain animation */
+@keyframes xp-gain {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-30px); opacity: 0; }
+}
+
+.xp-animation {
+    animation: xp-gain 1s ease-out forwards;
+}
+
+/* Level badge glow */
+.level-badge {
+    box-shadow: 0 0 20px rgba(230, 0, 92, 0.5);
+}
+
+/* Dashboard stats card */
+.stats-card {
+    background: linear-gradient(135deg, #140C16 0%, #1a1020 100%);
+    border: 1px solid rgba(230, 0, 92, 0.2);
+}
+
+.stats-card:hover {
+    border-color: rgba(230, 0, 92, 0.5);
+    box-shadow: 0 0 30px rgba(230, 0, 92, 0.1);
+}
+
+/* Nav link active state */
+.nav-link-active {
+    color: #E6005C;
+    position: relative;
+}
+
+.nav-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #E6005C;
+    border-radius: 1px;
+}
+
+/* Lesson content markdown styles */
+.lesson-content h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+.lesson-content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #FFB3D1;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.lesson-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #A699A8;
+}
+
+.lesson-content ul, .lesson-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    color: #A699A8;
+}
+
+.lesson-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Modal overlay */
+.modal-overlay {
+    backdrop-filter: blur(8px);
+    background: rgba(9, 5, 10, 0.8);
 }
