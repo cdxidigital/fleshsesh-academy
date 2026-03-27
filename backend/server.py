@@ -141,7 +141,7 @@ COURSES_DATA = [
         "description": "Build self-awareness, emotional literacy, and understand your desire patterns. Master body language basics and consent foundations.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
+        "image_url": "https://images.pexels.com/photos/5931495/pexels-photo-5931495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "skills": ["Self-Awareness", "Body Language", "Emotional Literacy", "Boundaries"],
         "instructor": "Aria Wren"
     },
@@ -152,7 +152,7 @@ COURSES_DATA = [
         "description": "Master social energy, flirting fundamentals, and the art of playful tension. Learn to navigate first dates and handle rejection gracefully.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "image_url": "https://images.pexels.com/photos/1600128/pexels-photo-1600128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "skills": ["Flirting", "Social Energy", "Texting", "First Dates"],
         "instructor": "Marcus Vale"
     },
@@ -163,7 +163,7 @@ COURSES_DATA = [
         "description": "Develop emotional depth, build trust, and master sexual communication. Navigate desire differences and create lasting intimacy rituals.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1765854894510-7bb4cc0d88eb?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
         "skills": ["Emotional Depth", "Trust Building", "Sexual Communication", "Conflict Resolution"],
         "instructor": "Aria Wren"
     },
@@ -174,7 +174,7 @@ COURSES_DATA = [
         "description": "Unlock sensual awareness, touch mastery, and arousal communication. Learn aftercare rituals and overcome performance anxiety.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1769414702897-29a55edc6bbc?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
         "skills": ["Sensual Awareness", "Touch Mastery", "Arousal Control", "Aftercare"],
         "instructor": "Luca Amore"
     },
@@ -185,7 +185,7 @@ COURSES_DATA = [
         "description": "Explore fantasy psychology, roleplay creation, and erotic storytelling. Learn sensory play and introduce novelty safely.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
+        "image_url": "https://images.pexels.com/photos/1493295/pexels-photo-1493295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "skills": ["Fantasy Design", "Roleplay", "Erotic Storytelling", "Sensory Play"],
         "instructor": "Nyx"
     },
@@ -196,7 +196,7 @@ COURSES_DATA = [
         "description": "Master anatomy of pleasure, explore positions for all bodies, and develop stamina. Includes inclusive variations and body-positive practice.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1771433085746-9adf1294c7ad?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
         "skills": ["Anatomy", "Positions", "Stamina", "Body Mechanics"],
         "instructor": "Luca Amore"
     },
@@ -207,7 +207,7 @@ COURSES_DATA = [
         "description": "Learn consent architecture, impact play safety, and D/s psychology. Master negotiation scripts and ethical kink practice.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
+        "image_url": "https://images.pexels.com/photos/5631041/pexels-photo-5631041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "skills": ["Consent Architecture", "Power Exchange", "Scene Design", "Negotiation"],
         "instructor": "Nyx"
     },
@@ -218,20 +218,20 @@ COURSES_DATA = [
         "description": "Design relationship structures, navigate monogamy and non-monogamy, and build conflict repair systems. Master long-term relationship architecture.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1763391275169-d686f6d46f17?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
         "skills": ["Relationship Design", "Agreements", "Repair Rituals", "Growth Planning"],
-        "instructor": "Aria Wren"
+        "instructor": "Dr. Evelyn Hart"
     },
     {
         "id": "level-9",
         "level": 9,
-        "title": "Social & Community Mastery",
-        "description": "Build intimacy-supportive communities, navigate social events, and master group dynamics. Learn ethical community practices.",
+        "title": "Digital Intimacy & Modern Dating",
+        "description": "Master online dating, build authentic digital connections, and navigate modern relationship dynamics across platforms.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
-        "skills": ["Community Building", "Event Navigation", "Group Dynamics", "Ethics"],
-        "instructor": "Marcus Vale"
+        "image_url": "https://images.unsplash.com/photo-1769414704400-d4f7549bcfda?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
+        "skills": ["Online Dating", "Digital Communication", "App Strategy", "Video Dates"],
+        "instructor": "Kai Storm"
     },
     {
         "id": "level-10",
@@ -240,7 +240,7 @@ COURSES_DATA = [
         "description": "Choose your specialization: Relationship Architect, Erotic Explorer, Power Dynamics Master, or Tantric Intimacy. Includes teaching others.",
         "modules": 10,
         "lessons": 100,
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "image_url": "https://images.unsplash.com/photo-1763677594421-f58e50cce64d?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85",
         "skills": ["Specialization", "Mentoring", "Advanced Practice", "Integration"],
         "instructor": "All Faculty"
     }
@@ -255,7 +255,7 @@ INSTRUCTORS_DATA = [
         "description": "Former social anxiety sufferer turned charisma expert. Marcus teaches authentic confidence without manipulation, focusing on ethical attraction and genuine connection.",
         "personality": "Warm, encouraging, and direct. Uses humor to ease tension and real-world examples from his own journey. Never judges—celebrates every small win.",
         "teaching_style": "Socratic questioning combined with practical exercises. Assigns 'field missions' to practice skills in low-stakes environments. Provides detailed feedback on approach scenarios.",
-        "image_url": "https://images.pexels.com/photos/730229/pexels-photo-730229.jpeg"
+        "image_url": "https://images.pexels.com/photos/6956149/pexels-photo-6956149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
         "id": "nyx",
@@ -265,7 +265,7 @@ INSTRUCTORS_DATA = [
         "description": "A mysterious and commanding presence, Nyx guides learners through the psychology of power dynamics with an unwavering focus on safety, consent, and ethical exploration.",
         "personality": "Calm authority with unexpected warmth. Speaks in measured, deliberate tones. Has zero tolerance for boundary violations but infinite patience for genuine questions.",
         "teaching_style": "Safety-first demonstrations, detailed negotiation frameworks, and progressive skill-building. Uses case studies and 'what-if' scenarios to prepare for edge cases.",
-        "image_url": "https://images.pexels.com/photos/6939222/pexels-photo-6939222.jpeg"
+        "image_url": "https://images.pexels.com/photos/5631041/pexels-photo-5631041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
         "id": "aria-wren",
@@ -275,7 +275,7 @@ INSTRUCTORS_DATA = [
         "description": "Warm, insightful, and deeply empathetic. Aria specializes in building emotional safety, navigating vulnerability, and creating lasting intimate connections.",
         "personality": "Gentle yet incisive. Creates immediate psychological safety. Has an uncanny ability to name emotions before learners can articulate them.",
         "teaching_style": "Reflective journaling prompts, guided visualizations, and attachment-informed coaching. Helps identify patterns and gently challenges self-limiting beliefs.",
-        "image_url": "https://images.unsplash.com/photo-1770062422093-ae32c8fed2a3"
+        "image_url": "https://images.unsplash.com/photo-1763906803356-c4c2c83dc012?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
     },
     {
         "id": "luca-amore",
@@ -285,7 +285,7 @@ INSTRUCTORS_DATA = [
         "description": "Body-positive advocate and pleasure researcher. Luca teaches the art of physical connection with scientific precision and playful energy, celebrating all bodies.",
         "personality": "Playful, scientific, and enthusiastically body-positive. Makes anatomy discussions feel natural and fun. Normalizes all bodies and desires.",
         "teaching_style": "Combines neuroscience with practical technique. Uses anatomical models, guided self-exploration exercises, and partner communication scripts.",
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg"
+        "image_url": "https://images.unsplash.com/photo-1689218744786-9546da7b6873?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
     },
     {
         "id": "dr-evelyn-hart",
@@ -295,7 +295,7 @@ INSTRUCTORS_DATA = [
         "description": "Licensed relationship therapist with 20 years of AI-synthesized clinical experience. Dr. Hart helps design sustainable relationship structures and repair damaged connections.",
         "personality": "Professionally warm with academic precision. Balances validation with accountability. Never takes sides but illuminates blind spots.",
         "teaching_style": "Evidence-based interventions, structured communication frameworks (like Gottman Method), and relationship 'health audits'. Assigns couple exercises and individual reflection.",
-        "image_url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg"
+        "image_url": "https://images.pexels.com/photos/1493295/pexels-photo-1493295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
         "id": "kai-storm",
@@ -305,7 +305,7 @@ INSTRUCTORS_DATA = [
         "description": "Gen-Z native who decoded the algorithms of modern romance. Kai teaches authentic connection in digital spaces while maintaining safety and boundaries.",
         "personality": "Energetic, tech-savvy, and refreshingly honest. Speaks the language of dating apps fluently. Keeps it real about the challenges of modern dating.",
         "teaching_style": "Profile reviews, message coaching, and app strategy sessions. Analyzes screenshots, suggests openers, and helps craft authentic online personas.",
-        "image_url": "https://images.pexels.com/photos/1910229/pexels-photo-1910229.jpeg"
+        "image_url": "https://images.unsplash.com/photo-1619241805829-34fb64299391?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
     },
     {
         "id": "maya-tantra",
@@ -315,7 +315,7 @@ INSTRUCTORS_DATA = [
         "description": "Trained in Eastern and Western traditions of sacred sexuality. Maya weaves together ancient wisdom and modern neuroscience to create transcendent intimate experiences.",
         "personality": "Serene, mystical yet grounded. Speaks slowly and intentionally. Creates ritualistic containers for learning. Deeply spiritual without being preachy.",
         "teaching_style": "Guided meditations, breathwork practices, and energy awareness exercises. Emphasizes presence, intention-setting, and the spiritual dimensions of connection.",
-        "image_url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg"
+        "image_url": "https://images.unsplash.com/photo-1771433085746-9adf1294c7ad?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
     },
     {
         "id": "rex-sterling",
@@ -325,7 +325,7 @@ INSTRUCTORS_DATA = [
         "description": "Former 'tough guy' who discovered strength in softness. Rex helps men (and masculine-identifying people) integrate power with emotional availability and authentic expression.",
         "personality": "Gruff exterior, surprisingly tender core. Speaks from hard-won experience. Challenges toxic patterns while honoring healthy masculine energy.",
         "teaching_style": "Direct confrontation of limiting beliefs, shame resilience exercises, and permission-giving for emotional expression. Uses his own transformation story as teaching material.",
-        "image_url": "https://images.pexels.com/photos/730229/pexels-photo-730229.jpeg"
+        "image_url": "https://images.unsplash.com/photo-1595790753283-3c164baddb72?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85"
     }
 ]
 
