@@ -1,0 +1,111 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 5 (Jewel & Luxury) mixed with subtle Neon",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "IBM Plex Sans",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tight font-bold",
+      "h2": "text-4xl sm:text-5xl tracking-tight font-bold",
+      "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
+      "h4": "text-xl font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm",
+      "overline": "text-xs uppercase tracking-[0.2em] font-medium"
+    }
+  },
+  "colors": {
+    "background": "#09050A",
+    "foreground": "#FFFFFF",
+    "card": "#140C16",
+    "card_foreground": "#FFFFFF",
+    "popover": "#140C16",
+    "popover_foreground": "#FFFFFF",
+    "primary": "#E6005C",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#7A0033",
+    "secondary_foreground": "#FFFFFF",
+    "muted": "#2E1E31",
+    "muted_foreground": "#A699A8",
+    "accent": "#FFB3D1",
+    "accent_foreground": "#140C16",
+    "destructive": "#FF3B30",
+    "destructive_foreground": "#FFFFFF",
+    "border": "#2E1E31",
+    "input": "#2E1E31",
+    "ring": "#E6005C"
+  },
+  "layout": {
+    "spacing_scale": "generous",
+    "container_padding": "p-8 md:p-12",
+    "grid_strategy": {
+      "marketing": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+      "dashboard": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    },
+    "border_radius": "rounded-2xl"
+  },
+  "surfaces": {
+    "header": "backdrop-blur-xl bg-[#09050A]/70 border-b border-white/10",
+    "cards": "bg-[#140C16] border border-[#2E1E31] hover:-translate-y-1 transition-transform duration-300",
+    "pricing_cards": "relative overflow-hidden bg-[#140C16] border border-[#2E1E31]"
+  },
+  "motion": {
+    "hover": "transition-all duration-300 ease-in-out",
+    "active": "active:scale-95"
+  },
+  "media": {
+    "logos": {
+      "full": "https://customer-assets.emergentagent.com/job_af07beda-3c09-4f9a-bec6-bdb12e8e955b/artifacts/6t80lhv8_Gemini_Generated_Image_1qlo0c1qlo0c1qlo-removebg-preview.png",
+      "icon": "https://customer-assets.emergentagent.com/job_af07beda-3c09-4f9a-bec6-bdb12e8e955b/artifacts/f8j8ftyh_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
+    },
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.pexels.com/photos/1910229/pexels-photo-1910229.jpeg",
+        "description": "Dynamic abstract art with vibrant light streaks in pink and blue on a black background"
+      },
+      {
+        "category": "instructor_marcus",
+        "url": "https://images.pexels.com/photos/730229/pexels-photo-730229.jpeg",
+        "description": "Portrait of a handsome man in a coat indoors with creative lighting"
+      },
+      {
+        "category": "instructor_nyx",
+        "url": "https://images.pexels.com/photos/6939222/pexels-photo-6939222.jpeg",
+        "description": "Bold studio portrait of a woman in leather with chain jewelry and dramatic lighting"
+      },
+      {
+        "category": "instructor_aria",
+        "url": "https://images.unsplash.com/photo-1770062422093-ae32c8fed2a3",
+        "description": "Woman in sequined jacket, elegant and warm"
+      },
+      {
+        "category": "course_intimacy",
+        "url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
+        "description": "Emotive portrait of a glitter-covered couple expressing intimacy"
+      },
+      {
+        "category": "course_connection",
+        "url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
+        "description": "Close-up of a couple sharing a romantic moment with rainbow light shadows"
+      }
+    ]
+  },
+  "components": {
+    "buttons": "rounded-full font-semibold px-8 py-3",
+    "inputs": "bg-[#09050A] border-[#2E1E31] rounded-lg focus:ring-2 focus:ring-[#E6005C]"
+  },
+  "instructions_to_main_agent": [
+    "Build a hybrid fullstack application (marketing pages + dashboard)",
+    "Implement the landing page with Hero, Courses Overview, AI Instructors, Pricing, and a clear call to action.",
+    "Implement the learning dashboard for authenticated users to view courses, levels, and XP/tokens.",
+    "Use 'Outfit' for all headings and 'IBM Plex Sans' for body text. Load them from Google Fonts.",
+    "Follow the specified dark theme with deep plum (#09050A base) and electric neon pink (#E6005C) accents.",
+    "Ensure the hero section uses the hero_background image with a dark gradient overlay (e.g., bg-black/60) to maintain text readability.",
+    "Instructors (Marcus, Nyx, Aria) should be showcased in a bento grid or stylized card layout using the provided instructor images.",
+    "Course thumbnails should use the connection and intimacy images.",
+    "Use Lucide React or Radix UI icons for UI elements.",
+    "Use generic shadcn components where needed (e.g., for forms, tabs in dashboard), but style them according to the color tokens.",
+    "Ensure all interactive elements have data-testid attributes for testing."
+  ]
+}
