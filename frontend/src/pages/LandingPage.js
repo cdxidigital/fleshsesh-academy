@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
     ArrowRight, 
     Sparkles, 
@@ -13,16 +13,19 @@ import {
     BookOpen,
     Trophy,
     Zap,
-    X
+    X,
+    MessageCircle
 } from 'lucide-react';
 import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from '../components/AuthModal';
+import { toast } from 'sonner';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 const LandingPage = () => {
     const { isAuthenticated } = useAuth();
+    const navigate = useNavigate();
     const [courses, setCourses] = useState([]);
     const [instructors, setInstructors] = useState([]);
     const [authModalOpen, setAuthModalOpen] = useState(false);
@@ -117,7 +120,7 @@ const LandingPage = () => {
                     {/* Hero Logo */}
                     <div className="flex flex-col items-center mb-8">
                         <img 
-                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/22p6smrp_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview.png"
+                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/3848ji5y_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview_transparent.png"
                             alt="Fleshsesh Academy"
                             className="h-32 md:h-44 object-contain"
                         />
@@ -397,6 +400,25 @@ const LandingPage = () => {
                                         <p className="text-white/70 text-sm">{selectedInstructor.teaching_style}</p>
                                     </div>
                                 )}
+                                
+                                {/* Chat with Faculty Button */}
+                                <button
+                                    onClick={() => {
+                                        if (!isAuthenticated) {
+                                            toast.error('Please login to chat with faculty');
+                                            setSelectedInstructor(null);
+                                            setAuthMode('login');
+                                            setAuthModalOpen(true);
+                                        } else {
+                                            navigate(`/chat/${selectedInstructor.id}`);
+                                        }
+                                    }}
+                                    className="w-full btn-primary flex items-center justify-center gap-2 mt-4"
+                                    data-testid={`chat-with-${selectedInstructor.id}`}
+                                >
+                                    <MessageCircle className="w-5 h-5" />
+                                    Chat Now
+                                </button>
                             </div>
                         </div>
                     </div>

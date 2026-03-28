@@ -12,6 +12,7 @@ import uuid
 from datetime import datetime, timezone, timedelta
 import jwt
 import bcrypt
+from emergentintegrations.llm.chat import LlmChat, UserMessage
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -129,6 +130,33 @@ class EncyclopediaEntry(BaseModel):
     related_entries: List[str] = []
     lecturer_note: Optional[Dict[str, str]] = None
     depth_level: str = "beginner"  # beginner, intermediate, advanced
+
+# ============== AI FACULTY CHAT MODELS ==============
+
+class ChatMessage(BaseModel):
+    role: str  # "user" or "assistant"
+    content: str
+    timestamp: str
+
+class ChatSession(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str
+    user_id: str
+    instructor_id: str
+    instructor_name: str
+    messages: List[ChatMessage] = []
+    created_at: str
+    updated_at: str
+
+class ChatRequest(BaseModel):
+    message: str
+    instructor_id: str
+    session_id: Optional[str] = None
+
+class ChatResponse(BaseModel):
+    response: str
+    session_id: str
+    instructor_name: str
 
 # ============== HELPER FUNCTIONS ==============
 
@@ -986,6 +1014,155 @@ async def bookmark_entry(entry_id: str, current_user: dict = Depends(get_current
     return {"message": f"Bookmark {action}", "bookmarked_entries": bookmarks}
 
 # ============== STATS & HEALTH ==============
+
+# ============== AI FACULTY CHAT ENDPOINTS ==============
+
+def get_instructor_system_prompt(instructor: dict, user_name: str = "Student") -> str:
+    """Generate a personalized system prompt for an AI Faculty member"""
+    return f"""You are {instructor['name']}, a faculty member at Fleshsesh Academy - an AI-powered intimacy education platform.
+
+YOUR ROLE & EXPERTISE:
+Title: {instructor['title']}
+Specialty: {instructor['specialty']}
+Background: {instructor['background']}
+
+YOUR VOICE & STYLE:
+{instructor['voice_style']}
+
+GUIDELINES:
+1. Stay in character as {instructor['name']} throughout the conversation
+2. Address the student warmly but professionally - their name is {user_name}
+3. Be educational, supportive, and sex-positive
+4. Provide accurate, evidence-based information when discussing physiology or practices
+5. Always prioritize consent, safety, and well-being in your advice
+6. If asked about topics outside your expertise, acknowledge this and suggest which faculty member might help
+7. Use your distinctive voice and communication style consistently
+8. Never be judgmental - create a safe space for questions
+9. Keep responses conversational but informative (aim for 2-4 paragraphs unless more detail is needed)
+10. When appropriate, reference the Academy's curriculum, labs, or resources
+
+SAMPLE OF YOUR COMMUNICATION STYLE:
+{instructor.get('sample_response', 'Be warm, knowledgeable, and supportive.')}
+
+Remember: You're here to educate, support, and empower students on their intimacy journey."""
+
+@api_router.post("/chat/faculty", response_model=ChatResponse)
+async def chat_with_faculty(request: ChatRequest, user: dict = Depends(get_current_user)):
+    """Chat with an AI Faculty member"""
+    # Find the instructor
+    instructor = next((i for i in INSTRUCTORS_DATA if i["id"] == request.instructor_id), None)
+    if not instructor:
+        raise HTTPException(status_code=404, detail="Instructor not found")
+    
+    # Get or create chat session
+    session_id = request.session_id or str(uuid.uuid4())
+    
+    # Check if session exists
+    existing_session = await db.chat_sessions.find_one(
+        {"id": session_id, "user_id": user["id"]},
+        {"_id": 0}
+    )
+    
+    if existing_session:
+        # Load existing messages for context
+        messages_history = existing_session.get("messages", [])
+    else:
+        messages_history = []
+        # Create new session
+        new_session = {
+            "id": session_id,
+            "user_id": user["id"],
+            "instructor_id": request.instructor_id,
+            "instructor_name": instructor["name"],
+            "messages": [],
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "updated_at": datetime.now(timezone.utc).isoformat()
+        }
+        await db.chat_sessions.insert_one(new_session)
+    
+    try:
+        # Create LLM chat instance
+        api_key = os.environ.get("EMERGENT_LLM_KEY")
+        if not api_key:
+            raise HTTPException(status_code=500, detail="LLM API key not configured")
+        
+        system_prompt = get_instructor_system_prompt(instructor, user.get("name", "Student"))
+        
+        chat = LlmChat(
+            api_key=api_key,
+            session_id=f"{session_id}-{instructor['id']}",
+            system_message=system_prompt
+        ).with_model("openai", "gpt-4o")
+        
+        # Add conversation history to the chat
+        for msg in messages_history[-10:]:  # Keep last 10 messages for context
+            if msg["role"] == "user":
+                await chat.send_message(UserMessage(text=msg["content"]))
+        
+        # Send the new message
+        user_message = UserMessage(text=request.message)
+        response = await chat.send_message(user_message)
+        
+        # Store messages in database
+        now = datetime.now(timezone.utc).isoformat()
+        
+        new_messages = [
+            {"role": "user", "content": request.message, "timestamp": now},
+            {"role": "assistant", "content": response, "timestamp": now}
+        ]
+        
+        await db.chat_sessions.update_one(
+            {"id": session_id},
+            {
+                "$push": {"messages": {"$each": new_messages}},
+                "$set": {"updated_at": now}
+            }
+        )
+        
+        return ChatResponse(
+            response=response,
+            session_id=session_id,
+            instructor_name=instructor["name"]
+        )
+        
+    except Exception as e:
+        logger.error(f"Chat error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Chat service error: {str(e)}")
+
+@api_router.get("/chat/sessions")
+async def get_chat_sessions(user: dict = Depends(get_current_user)):
+    """Get all chat sessions for the current user"""
+    sessions = await db.chat_sessions.find(
+        {"user_id": user["id"]},
+        {"_id": 0}
+    ).sort("updated_at", -1).to_list(50)
+    
+    return sessions
+
+@api_router.get("/chat/sessions/{session_id}")
+async def get_chat_session(session_id: str, user: dict = Depends(get_current_user)):
+    """Get a specific chat session"""
+    session = await db.chat_sessions.find_one(
+        {"id": session_id, "user_id": user["id"]},
+        {"_id": 0}
+    )
+    
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    return session
+
+@api_router.delete("/chat/sessions/{session_id}")
+async def delete_chat_session(session_id: str, user: dict = Depends(get_current_user)):
+    """Delete a chat session"""
+    result = await db.chat_sessions.delete_one(
+        {"id": session_id, "user_id": user["id"]}
+    )
+    
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    return {"message": "Session deleted"}
 
 @api_router.get("/")
 async def root():

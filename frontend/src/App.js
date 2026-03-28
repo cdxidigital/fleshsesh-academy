@@ -17,6 +17,7 @@ import CoursesPage from "./pages/CoursesPage";
 import CourseDetail from "./pages/CourseDetail";
 import Encyclopedia from "./pages/Encyclopedia";
 import JourneyMap from "./pages/JourneyMap";
+import FacultyChat from "./pages/FacultyChat";
 
 function App() {
     const [ageVerified, setAgeVerified] = useState(
@@ -41,6 +42,7 @@ function App() {
                                 <Route path="/courses/:courseId" element={<CourseDetail />} />
                                 <Route path="/encyclopedia" element={<Encyclopedia />} />
                                 <Route path="/journey" element={<JourneyMap />} />
+                                <Route path="/chat/:instructorId" element={<FacultyChat />} />
                             </Routes>
                         </main>
                         <Footer />
