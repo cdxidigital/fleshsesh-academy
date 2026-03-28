@@ -70,14 +70,10 @@ const AuthModal = ({ isOpen, onClose, mode, setMode }) => {
 
                 <div className="text-center mb-8">
                     <img 
-                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/e3yqun9k_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
-                        alt="Fleshsesh"
-                        className="h-16 w-16 mx-auto mb-2"
+                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                        alt="Fleshsesh Academy"
+                        className="h-20 mx-auto mb-4"
                     />
-                    <div className="flex flex-col items-center mb-4">
-                        <span className="text-2xl font-bold text-white font-['Outfit']">fleshsesh</span>
-                        <span className="text-sm font-bold text-[#E6005C] tracking-widest uppercase">Academy</span>
-                    </div>
                     <h2 className="text-2xl font-bold text-white font-['Outfit']">
                         {mode === 'login' ? 'Welcome Back' : 'Join the Academy'}
                     </h2>
