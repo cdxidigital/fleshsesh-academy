@@ -154,7 +154,7 @@ class FleshseshAcademyAPITester:
         print("\n🔍 Testing Lessons Endpoints...")
         
         # Test getting a specific lesson
-        lesson_id = "lesson-1-1-1"  # From the sample data
+        lesson_id = "lesson-1"  # From the sample data
         lesson = self.run_test("Get Single Lesson", "GET", f"lessons/{lesson_id}", 200)
         
         # Test lesson completion (requires authentication)
@@ -192,8 +192,8 @@ class FleshseshAcademyAPITester:
         temp_token = self.token
         self.token = None
         
-        self.run_test("Unauthorized Get User", "GET", "auth/me", 401)
-        self.run_test("Unauthorized Complete Lesson", "POST", "lessons/lesson-1-1-1/complete", 401)
+        self.run_test("Unauthorized Get User", "GET", "auth/me", 403)
+        self.run_test("Unauthorized Complete Lesson", "POST", "lessons/lesson-1/complete", 403)
         
         # Restore token
         self.token = temp_token

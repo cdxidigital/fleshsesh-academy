@@ -60,7 +60,7 @@ const Dashboard = () => {
     }
 
     const completedCount = user?.completed_lessons?.length || 0;
-    const totalLessons = 500;
+    const totalLessons = 28;
     const progressPercent = Math.round((completedCount / totalLessons) * 100);
     const xpToNextLevel = ((user?.level || 1) * 500) - (user?.xp || 0);
 

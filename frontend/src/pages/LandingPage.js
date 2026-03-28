@@ -55,13 +55,13 @@ const LandingPage = () => {
             name: 'Free',
             price: '$0',
             period: 'forever',
-            description: 'Start your journey with foundational lessons',
+            description: 'Start your journey with Level 1: Self-Intimacy',
             features: [
-                'Access to Level 1 (50 lessons)',
+                'Full access to Level 1 (7 lessons)',
+                '2 Hedonistic Labs',
                 'Basic progress tracking',
                 'Community forum access',
-                '5 AI simulations per month',
-                'Email support'
+                'AI Advisor support'
             ],
             cta: 'Start Free',
             highlighted: false
@@ -70,15 +70,15 @@ const LandingPage = () => {
             name: 'Premium',
             price: '$24.99',
             period: 'per month',
-            description: 'Unlock deeper skills and personalized coaching',
+            description: 'Unlock the complete Intimacy Course',
             features: [
-                'All 10 levels (500 lessons)',
-                'Unlimited AI simulations',
-                'Personalized learning path',
-                'AI instructor chat sessions',
-                'Progress analytics',
+                'All 4 levels (28 lessons)',
+                '14 Hedonistic Labs',
+                'Full lesson content & exercises',
+                'AI Faculty chat sessions',
+                'Progress analytics & certificates',
                 'Priority support',
-                'Certificate of completion'
+                'Intimacy Mastery credential'
             ],
             cta: 'Go Premium',
             highlighted: true
@@ -92,10 +92,10 @@ const LandingPage = () => {
                 'Everything in Premium',
                 'Live group coaching calls',
                 '1-on-1 AI coaching sessions',
-                'Early access to new content',
-                'Exclusive masterclasses',
+                'A-Z Encyclopedia full access',
                 'VIP community access',
-                'Partner/couples account'
+                'Partner/couples account',
+                'Early access to new content'
             ],
             cta: 'Join Elite',
             highlighted: false
@@ -135,8 +135,8 @@ const LandingPage = () => {
                     </h1>
                     
                     <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto mb-10">
-                        500+ lessons across 10 levels. AI instructors. Personalized simulations. 
-                        Transform your confidence, attraction, and relationships.
+                        28 transformative lessons across 4 levels. 8 expert AI faculty. Hedonistic Labs. 
+                        Transform your relationship with intimacy, connection, and pleasure.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -169,9 +169,9 @@ const LandingPage = () => {
                     {/* Stats */}
                     <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
-                            { value: '500+', label: 'Lessons', icon: BookOpen },
-                            { value: '250+', label: 'Simulations', icon: Play },
-                            { value: '10', label: 'Mastery Levels', icon: Trophy },
+                            { value: '28', label: 'Lessons', icon: BookOpen },
+                            { value: '14', label: 'Hedonistic Labs', icon: Play },
+                            { value: '4', label: 'Mastery Levels', icon: Trophy },
                             { value: '8', label: 'AI Faculty', icon: Users }
                         ].map((stat, i) => (
                             <div key={i} className="text-center">
