@@ -30,7 +30,7 @@ const AgeVerification = ({ onVerified }) => {
                 {/* Logo */}
                 <div className="mb-8">
                     <img 
-                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/22p6smrp_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview.png"
                         alt="Fleshsesh Academy"
                         className="h-32 mx-auto"
                     />

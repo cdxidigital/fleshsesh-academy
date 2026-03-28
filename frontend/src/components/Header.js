@@ -33,13 +33,13 @@ const Header = () => {
                         <Link to="/" className="flex items-center" data-testid="logo-link">
                             {/* Icon for mobile */}
                             <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/0oflvhi0_e7348727-7e42-401a-8939-9def0983e0a3.jpg"
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/e3wnffn5_e7348727-7e42-401a-8939-9def0983e0a3-removebg-preview.png"
                                 alt="Fleshsesh Academy"
                                 className="h-12 w-12 object-contain md:hidden"
                             />
                             {/* Full logo for desktop */}
                             <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/22p6smrp_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview.png"
                                 alt="Fleshsesh Academy"
                                 className="h-12 object-contain hidden md:block"
                             />
