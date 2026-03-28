@@ -38,22 +38,22 @@ const AIAdvisor = () => {
         
         // Course recommendations
         if (lowerMessage.includes('course') || lowerMessage.includes('start') || lowerMessage.includes('begin') || lowerMessage.includes('recommend')) {
-            return "Great question! I'd recommend starting with **Level 1: Foundations of Presence**. It covers self-awareness, body language, and emotional literacy — essential skills for everything else! Once you've built that foundation, you can explore Level 2 (Attraction) or Level 3 (Connection) based on your goals. Want me to tell you more about any specific level?";
+            return "Great question! I'd recommend starting with **Level 1: Self-Intimacy**. It covers body literacy, shame resilience, and self-love practices — essential foundations for everything else!\n\nThe 4 levels are:\n• **Level 1** - Self-Intimacy (with Dr. Nova Vale & Coach Mira Sol)\n• **Level 2** - Connected Intimacy (with Prof. Arden Moss & Dr. Elise Hart)\n• **Level 3** - Diverse Intimacy (with Dr. Sera Quinn & Kai Voss)\n• **Level 4** - Advanced Intimacy (with Talia Rhine & Prof. Jun Hart)\n\nWant me to tell you more about any specific level?";
         }
         
         // Faculty questions
         if (lowerMessage.includes('faculty') || lowerMessage.includes('instructor') || lowerMessage.includes('teacher')) {
-            return "Our AI Faculty is incredible! We have 8 specialist instructors:\n\n• **Marcus Vale** - Attraction & confidence\n• **Nyx** - Power dynamics & kink\n• **Aria Wren** - Emotional intelligence\n• **Luca Amore** - Physical intimacy\n• **Dr. Evelyn Hart** - Relationship therapy\n• **Kai Storm** - Digital dating\n• **Maya Oasis** - Tantric practices\n• **Rex Sterling** - Masculinity coaching\n\nEach has their own personality and teaching style. Click on any instructor card to learn more about them!";
+            return "Our AI Faculty is incredible! We have 8 specialist instructors:\n\n• **Dr. Nova Vale** - Sexual Physiology & Body Science\n• **Coach Mira Sol** - Self-Love & Shame Resilience\n• **Prof. Arden Moss** - Consent & Communication\n• **Dr. Elise Hart** - Shared Pleasure & Touch Mastery\n• **Dr. Sera Quinn** - Identity & Diversity\n• **Kai Voss** - Kink & Power Dynamics\n• **Talia Rhine** - Digital Intimacy & Safety\n• **Prof. Jun Hart** - Media Literacy & Lifelong Practice\n\nEach has their own personality and teaching style. Click on any instructor card on the home page to learn more about them!";
         }
         
         // XP and gamification
         if (lowerMessage.includes('xp') || lowerMessage.includes('level') || lowerMessage.includes('progress') || lowerMessage.includes('gamif')) {
-            return "The XP system is designed to keep you motivated! Here's how it works:\n\n• **Complete lessons** = Earn 25 XP each\n• **Finish modules** = Bonus XP rewards\n• **Daily streaks** = Multiplier bonuses\n• **Level up** every 500 XP\n\nYou also earn **Desire Tokens** that can unlock special content and boosters. Check your Dashboard to see your current progress!";
+            return "The XP system is designed to keep you motivated! Here's how it works:\n\n• **Complete lessons** = Earn 50 XP each\n• **Capstone lessons** = Earn 100-200 XP\n• **Complete labs** = Earn 25 Desire Tokens\n• **Level up** every 500 XP\n\nYou also earn **badges** when you complete each level:\n• Self-Intimacy Sovereign (Level 1)\n• Connection Fluent (Level 2)\n• Diversity Explorer (Level 3)\n• Intimacy Master (Level 4)\n\nCheck your Dashboard or Journey Map to see your progress!";
         }
         
         // Pricing and premium
         if (lowerMessage.includes('premium') || lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('subscription') || lowerMessage.includes('pay')) {
-            return "We have three tiers designed for different needs:\n\n**Free** ($0) - Level 1 access, basic features\n**Premium** ($24.99/mo) - All 1000 lessons, unlimited AI simulations, personalized learning\n**Elite** ($64.99/mo) - Everything + live coaching, 1-on-1 AI sessions, VIP community\n\nThe Free tier is a great way to explore before committing. Most learners find Premium gives them everything they need!";
+            return "We have three tiers designed for different needs:\n\n**Free** ($0) - Level 1 access (7 lessons), basic features\n**Premium** ($24.99/mo) - All 28 lessons, 14 Hedonistic Labs, AI Faculty chat\n**Elite** ($64.99/mo) - Everything + live coaching, 1-on-1 AI sessions, A-Z Encyclopedia\n\nThe Free tier is a great way to explore before committing. Most learners find Premium gives them everything they need!";
         }
         
         // Privacy and safety

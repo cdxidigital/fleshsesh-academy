@@ -197,7 +197,7 @@ const Dashboard = () => {
                             
                             {user?.subscription_tier === 'free' && (
                                 <p className="text-white/60 text-sm mb-4">
-                                    Upgrade to unlock all 1000 lessons and unlimited AI simulations
+                                    Upgrade to unlock all 28 lessons and unlimited AI Faculty chat
                                 </p>
                             )}
                         </div>

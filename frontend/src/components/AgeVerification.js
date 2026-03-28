@@ -30,12 +30,10 @@ const AgeVerification = ({ onVerified }) => {
                 {/* Logo */}
                 <div className="mb-8">
                     <img 
-                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/e3yqun9k_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
-                        alt="Fleshsesh"
-                        className="h-20 w-20 mx-auto mb-4"
+                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/t9v0jkrx_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                        alt="Fleshsesh Academy"
+                        className="h-32 mx-auto"
                     />
-                    <h1 className="text-3xl font-bold text-white font-['Outfit']">fleshsesh</h1>
-                    <p className="text-[#E6005C] font-bold tracking-widest uppercase text-sm">Academy</p>
                 </div>
 
                 {/* Warning Card */}

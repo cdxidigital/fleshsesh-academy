@@ -9,16 +9,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Brand */}
                     <div className="md:col-span-2">
-                        <Link to="/" className="flex items-center gap-3 mb-4">
+                        <Link to="/" className="inline-block mb-4">
                             <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/e3yqun9k_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
-                                alt="Fleshsesh"
-                                className="h-12 w-12 object-contain"
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/t9v0jkrx_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                                alt="Fleshsesh Academy"
+                                className="h-16 object-contain"
                             />
-                            <div className="flex flex-col leading-none">
-                                <span className="text-2xl font-bold text-white font-['Outfit']">fleshsesh</span>
-                                <span className="text-sm font-bold text-[#E6005C] tracking-widest uppercase">Academy</span>
-                            </div>
                         </Link>
                         <p className="text-white/60 max-w-md mb-6">
                             AI-powered intimacy education that transforms how you connect, attract, and build lasting relationships. Learn at your own pace with expert guidance.

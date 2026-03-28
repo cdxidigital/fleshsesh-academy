@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User, LogOut, Sparkles } from 'lucide-react';
+import { Menu, X, User, LogOut, Sparkles, BookOpen, Target } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import AuthModal from './AuthModal';
 
@@ -14,6 +14,7 @@ const Header = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Courses', path: '/courses' },
+        { name: 'Encyclopedia', path: '/encyclopedia' },
         { name: 'Instructors', path: '/#instructors' },
         { name: 'Pricing', path: '/#pricing' },
     ];
@@ -29,16 +30,19 @@ const Header = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16 md:h-20">
                         {/* Logo */}
-                        <Link to="/" className="flex items-center gap-3" data-testid="logo-link">
+                        <Link to="/" className="flex items-center" data-testid="logo-link">
+                            {/* Icon for mobile */}
                             <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/e3yqun9k_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
-                                alt="Fleshsesh"
-                                className="h-10 w-10 object-contain"
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/zi8ts46n_e7348727-7e42-401a-8939-9def0983e0a3.jpg"
+                                alt="Fleshsesh Academy"
+                                className="h-12 w-12 object-contain md:hidden"
                             />
-                            <div className="flex flex-col leading-none">
-                                <span className="text-xl font-bold text-white font-['Outfit']">fleshsesh</span>
-                                <span className="text-xs font-bold text-[#E6005C] tracking-widest uppercase">Academy</span>
-                            </div>
+                            {/* Full logo for desktop */}
+                            <img 
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/t9v0jkrx_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                                alt="Fleshsesh Academy"
+                                className="h-12 object-contain hidden md:block"
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -70,6 +74,14 @@ const Header = () => {
                                             <Sparkles className="w-4 h-4 text-[#E6005C]" />
                                             <span className="text-sm font-medium">{user?.xp || 0} XP</span>
                                         </div>
+                                    </Link>
+                                    <Link 
+                                        to="/journey"
+                                        className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+                                        title="Journey Map"
+                                        data-testid="journey-link"
+                                    >
+                                        <Target className="w-5 h-5" />
                                     </Link>
                                     <Link 
                                         to="/dashboard"
@@ -140,6 +152,14 @@ const Header = () => {
                                             className="text-sm font-medium text-white/80 hover:text-white"
                                         >
                                             Dashboard
+                                        </Link>
+                                        <Link 
+                                            to="/journey" 
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="text-sm font-medium text-white/80 hover:text-white flex items-center gap-2"
+                                        >
+                                            <Target className="w-4 h-4" />
+                                            Journey Map
                                         </Link>
                                         <button 
                                             onClick={() => { logout(); setMobileMenuOpen(false); }}

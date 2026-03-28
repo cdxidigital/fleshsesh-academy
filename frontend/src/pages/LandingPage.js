@@ -117,11 +117,10 @@ const LandingPage = () => {
                     {/* Hero Logo */}
                     <div className="flex flex-col items-center mb-8">
                         <img 
-                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/384bxsj2_Gemini_Generated_Image_1qlo0c1qlo0c1qlo-removebg-preview.png"
+                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/t9v0jkrx_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
                             alt="Fleshsesh Academy"
-                            className="h-24 md:h-32 object-contain mb-2"
+                            className="h-32 md:h-44 object-contain"
                         />
-                        <span className="text-lg md:text-xl font-bold text-[#E6005C] tracking-[0.3em] uppercase">Academy</span>
                     </div>
 
                     <div className="inline-flex items-center gap-2 bg-[#E6005C]/10 border border-[#E6005C]/30 rounded-full px-4 py-2 mb-8">
@@ -245,7 +244,7 @@ const LandingPage = () => {
                             Your Journey to Mastery
                         </h2>
                         <p className="text-white/60 text-lg max-w-2xl mx-auto">
-                            10 comprehensive levels covering every aspect of attraction, connection, and intimacy
+                            4 comprehensive levels covering every aspect of self-intimacy, connection, and mastery
                         </p>
                     </div>
                     
@@ -289,7 +288,7 @@ const LandingPage = () => {
                             className="btn-secondary inline-flex items-center gap-2"
                             data-testid="view-all-courses-btn"
                         >
-                            View All 10 Levels
+                            View All 4 Levels
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>

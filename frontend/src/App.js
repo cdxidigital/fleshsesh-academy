@@ -15,6 +15,8 @@ import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import CoursesPage from "./pages/CoursesPage";
 import CourseDetail from "./pages/CourseDetail";
+import Encyclopedia from "./pages/Encyclopedia";
+import JourneyMap from "./pages/JourneyMap";
 
 function App() {
     const [ageVerified, setAgeVerified] = useState(
@@ -37,6 +39,8 @@ function App() {
                                 <Route path="/dashboard" element={<Dashboard />} />
                                 <Route path="/courses" element={<CoursesPage />} />
                                 <Route path="/courses/:courseId" element={<CourseDetail />} />
+                                <Route path="/encyclopedia" element={<Encyclopedia />} />
+                                <Route path="/journey" element={<JourneyMap />} />
                             </Routes>
                         </main>
                         <Footer />
