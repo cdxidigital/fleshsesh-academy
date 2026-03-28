@@ -1,7 +1,7 @@
 # Fleshsesh Academy - Product Requirements Document
 
 ## Original Problem Statement
-Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with comprehensive courses based on "The Intimacy Course" curriculum. Features include 4 mastery levels, 28 lessons, 14 hedonistic labs, 8 AI faculty members, age verification gateway, AI student advisor, A-Z encyclopedia, and student journey map.
+Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with comprehensive courses, 8 AI faculty members with unique personalities, age verification gateway, AI student advisor, A-Z encyclopedia, student journey map, and real AI chat with faculty.
 
 ## What's Been Implemented
 
@@ -9,14 +9,13 @@ Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with
 - **Age Verification Gateway** - 18+ verification with localStorage persistence
 - **User Authentication** - JWT-based login/register with progress tracking
 - **Course Dashboard** - XP, level, tokens, subscription status display
-- **Navigation** - Header with logo, nav links, auth controls
+- **Navigation** - Header with transparent PNG logos, nav links, auth controls
 
 ### Curriculum (Completed - March 2026)
 - **4 Mastery Levels**: Self-Intimacy → Connected Intimacy → Diverse Intimacy → Advanced Intimacy
 - **28 Transformative Lessons** (7 per level) with full content
 - **14 Hedonistic Labs** - hands-on practice exercises
 - **~12.5 hours** of total content
-- **Badges**: Self-Intimacy Sovereign, Connection Fluent, Diversity Explorer, Intimacy Master
 
 ### AI Faculty (Completed - March 2026)
 8 unique instructors with deep profiles:
@@ -29,48 +28,48 @@ Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with
 7. Talia Rhine - Digital Intimacy, Ethics & Online Safety
 8. Prof. Jun Hart - Media Literacy, Lifelong Intimacy & Mastery
 
+### Real AI Faculty Chat (NEW - March 2026)
+- **Integration**: Uses emergentintegrations library with GPT-4o model
+- **Personalized Responses**: Each instructor responds in character based on their personality profile
+- **Chat Storage**: Messages stored in MongoDB with full session management
+- **Features**:
+  - Chat history panel
+  - New chat button
+  - Delete chat sessions
+  - Typing indicators
+  - Message persistence
+- **Route**: `/chat/:instructorId`
+
 ### A-Z Encyclopedia (Completed - March 2026)
-- Dedicated `/encyclopedia` page with:
-  - Category filtering (Anatomy, Communication, Pleasure, Kink, Relational)
-  - Search functionality
-  - Entry detail view with definition, context, science, practice, safety
-  - Faculty insights per entry
-  - Bookmark functionality (authenticated)
-  - Difficulty levels (beginner/intermediate/advanced)
+- Dedicated `/encyclopedia` page with category filtering, search, entry details, faculty insights, bookmarking
 
 ### Student Journey Map (Completed - March 2026)
-- Dedicated `/journey` page with:
-  - Overall progress visualization
-  - Level-by-level progress tracking
-  - Lesson completion grid
-  - Badge display and unlock status
-  - Course navigation
+- Dedicated `/journey` page with progress visualization, level tracking, badges
 
 ### AI Student Advisor (Completed - March 2026)
-- "Sage" chat widget in bottom-right corner
-- Quick replies for common questions
-- Context-aware responses about courses, faculty, pricing, XP
-- Minimizable/closeable interface
+- "Sage" chat widget for platform navigation help
 
 ### Branding (Updated - March 2026)
-- New logos deployed:
-  - Full logo: "Fleshsesh Academy" with lips
-  - Icon logo: "F" with lips (for header mobile)
-- Used across: Age verification, Header, Footer, Landing hero
+- Transparent PNG logos deployed:
+  - Full logo: `3848ji5y_...transparent.png`
+  - Icon logo: `d0c4rw6h_...transparent.png`
 
 ## Technical Stack
 - **Backend**: FastAPI + MongoDB
 - **Frontend**: React + TailwindCSS + shadcn/ui
 - **Auth**: JWT with bcrypt password hashing
+- **LLM Integration**: emergentintegrations library with GPT-4o
 - **Deployment**: Kubernetes (preview environment)
 
 ## API Endpoints
 - `/api/auth/register`, `/api/auth/login`, `/api/auth/me`
 - `/api/courses`, `/api/courses/{id}`, `/api/courses/{id}/lessons`
-- `/api/lessons/{id}`, `/api/lessons/{id}/complete`
 - `/api/instructors`, `/api/instructors/{id}`
 - `/api/encyclopedia`, `/api/encyclopedia/{id}`, `/api/encyclopedia/{id}/bookmark`
 - `/api/labs`, `/api/labs/{id}/complete`
+- `/api/chat/faculty` (POST) - Send message to AI faculty
+- `/api/chat/sessions` - Get/list chat sessions
+- `/api/chat/sessions/{id}` - Get/delete specific session
 - `/api/stats`, `/api/health`
 
 ## Subscription Tiers
@@ -81,12 +80,11 @@ Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with
 ## Prioritized Backlog
 
 ### P0 (Critical for Launch)
-- [ ] Payment integration (Stripe) for subscription tiers
-- [ ] Real AI chat with faculty using LLM integration
+- [ ] Stripe payment integration for subscription tiers
 - [ ] Email verification for registration
+- [ ] Interactive labs with guided exercises
 
 ### P1 (High Priority)
-- [ ] Interactive labs with guided exercises
 - [ ] Community forums and anonymous Q&A
 - [ ] Certificate generation on level completion
 - [ ] Mobile responsiveness optimization
@@ -95,24 +93,20 @@ Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with
 - [ ] Interactive simulations/role-play
 - [ ] Partner/couples account linking
 - [ ] Push notifications for streaks
-- [ ] Dark/light theme toggle
 
 ### P3 (Future)
 - [ ] Video content integration
 - [ ] Live group coaching sessions
-- [ ] Peer review for mastery portfolio
 - [ ] API for third-party integrations
 
 ## Files Reference
-- `/app/backend/server.py` - Main FastAPI application
-- `/app/frontend/src/App.js` - React routing
+- `/app/backend/server.py` - Main FastAPI application with chat endpoints
+- `/app/frontend/src/pages/FacultyChat.js` - AI Faculty chat page
 - `/app/frontend/src/pages/Encyclopedia.js` - Encyclopedia page
 - `/app/frontend/src/pages/JourneyMap.js` - Journey map page
-- `/app/frontend/src/components/AIAdvisor.js` - Chat widget
-- `/app/frontend/src/components/Header.js` - Navigation header
-- `/app/frontend/src/components/Footer.js` - Site footer
-- `/app/frontend/src/components/AgeVerification.js` - Age gate
+- `/app/frontend/src/components/AIAdvisor.js` - Sage chat widget
 
 ## Test Reports
-- `/app/test_reports/iteration_4.json` - Latest comprehensive test (all pass)
-- `/app/backend/tests/test_api_endpoints.py` - Backend test suite
+- `/app/test_reports/iteration_5.json` - Latest comprehensive test (all pass)
+- `/app/backend/tests/test_api_endpoints.py` - Backend API test suite
+- `/app/backend/tests/test_faculty_chat.py` - Faculty chat test suite
