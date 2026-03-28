@@ -122,8 +122,8 @@ const LandingPage = () => {
                         <img 
                             src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
                             alt="Fleshsesh Academy"
-                            className="h-28 md:h-40 object-contain"
-                            style={{ filter: 'drop-shadow(0 0 30px rgba(230, 0, 92, 0.3))' }}
+                            className="h-36 sm:h-44 md:h-52 lg:h-60 object-contain"
+                            style={{ filter: 'drop-shadow(0 0 40px rgba(230, 0, 92, 0.4))' }}
                         />
                     </div>
 

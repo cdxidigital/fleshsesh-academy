@@ -35,13 +35,13 @@ const Header = () => {
                             <img 
                                 src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/hv2im2mi_Untitled%20design%20%281%29.png"
                                 alt="Fleshsesh Academy"
-                                className="h-10 w-10 object-contain md:hidden"
+                                className="h-12 w-12 object-contain md:hidden"
                             />
                             {/* Full logo for desktop */}
                             <img 
                                 src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
                                 alt="Fleshsesh Academy"
-                                className="h-10 object-contain hidden md:block"
+                                className="h-12 lg:h-14 object-contain hidden md:block"
                             />
                         </Link>
 

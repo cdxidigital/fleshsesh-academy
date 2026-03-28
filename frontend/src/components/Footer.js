@@ -13,7 +13,7 @@ const Footer = () => {
                             <img 
                                 src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
                                 alt="Fleshsesh Academy"
-                                className="h-14 object-contain"
+                                className="h-16 lg:h-20 object-contain"
                             />
                         </Link>
                         <p className="text-white/60 max-w-md mb-6">

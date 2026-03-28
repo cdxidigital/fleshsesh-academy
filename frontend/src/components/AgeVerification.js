@@ -32,8 +32,8 @@ const AgeVerification = ({ onVerified }) => {
                     <img 
                         src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
                         alt="Fleshsesh Academy"
-                        className="h-28 mx-auto"
-                        style={{ filter: 'drop-shadow(0 0 20px rgba(230, 0, 92, 0.3))' }}
+                        className="h-32 sm:h-36 md:h-40 mx-auto"
+                        style={{ filter: 'drop-shadow(0 0 30px rgba(230, 0, 92, 0.4))' }}
                     />
                 </div>
 
