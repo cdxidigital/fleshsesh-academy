@@ -10,13 +10,11 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <Link to="/" className="inline-block mb-4">
-                            <div className="bg-white/5 rounded-xl p-3 inline-block">
-                                <img 
-                                    src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
-                                    alt="Fleshsesh Academy"
-                                    className="h-12 object-contain rounded-lg"
-                                />
-                            </div>
+                            <img 
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
+                                alt="Fleshsesh Academy"
+                                className="h-14 object-contain"
+                            />
                         </Link>
                         <p className="text-white/60 max-w-md mb-6">
                             AI-powered intimacy education that transforms how you connect, attract, and build lasting relationships. Learn at your own pace with expert guidance.

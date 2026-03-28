@@ -32,21 +32,17 @@ const Header = () => {
                         {/* Logo */}
                         <Link to="/" className="flex items-center" data-testid="logo-link">
                             {/* Icon for mobile */}
-                            <div className="bg-white/5 rounded-lg p-1.5 md:hidden">
-                                <img 
-                                    src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/0oflvhi0_e7348727-7e42-401a-8939-9def0983e0a3.jpg"
-                                    alt="Fleshsesh Academy"
-                                    className="h-8 w-8 object-contain rounded"
-                                />
-                            </div>
+                            <img 
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/hv2im2mi_Untitled%20design%20%281%29.png"
+                                alt="Fleshsesh Academy"
+                                className="h-10 w-10 object-contain md:hidden"
+                            />
                             {/* Full logo for desktop */}
-                            <div className="bg-white/5 rounded-lg px-3 py-1.5 hidden md:block">
-                                <img 
-                                    src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
-                                    alt="Fleshsesh Academy"
-                                    className="h-8 object-contain rounded"
-                                />
-                            </div>
+                            <img 
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
+                                alt="Fleshsesh Academy"
+                                className="h-10 object-contain hidden md:block"
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}
