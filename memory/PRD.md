@@ -1,76 +1,56 @@
 # Fleshsesh Academy - Product Requirements Document
 
 ## Original Problem Statement
-Build a website for Fleshsesh Academy - an AI-powered intimacy and relationship education platform with comprehensive courses, AI instructors, gamification, and subscription tiers.
+Build Fleshsesh Academy eCampus - an AI-powered intimacy education platform with comprehensive courses based on "The Intimacy Course" curriculum.
 
-## User Personas
-1. **Seekers** - Individuals looking to improve their confidence and relationship skills
-2. **Learners** - People wanting structured education on intimacy topics
-3. **Couples** - Partners looking to enhance their connection
-4. **Explorers** - Those curious about power dynamics, kink, and advanced topics
+## What's Been Implemented (Jan 2026)
 
-## Core Requirements (Static)
-- 18+ age verification gateway
-- AI-powered student advisor (Sage)
-- 8 AI Faculty with unique personalities/teaching styles
-- 10 mastery levels with progressive curriculum
-- User authentication (JWT)
-- Gamification (XP, levels, tokens)
-- Subscription tiers (Free/Premium/Elite)
+### Curriculum (from Notion Doc)
+- **4 Mastery Levels**: Self-Intimacy → Connected Intimacy → Diverse Intimacy → Advanced Intimacy
+- **28 Transformative Lessons** (7 per level)
+- **12 Hedonistic Labs** - hands-on practice exercises
+- **~12.5 hours** of content
+- **Badges**: Self-Intimacy Sovereign, Connection Fluent, Diversity Explorer, Intimacy Master
 
-## What's Been Implemented
-**Date: Jan 2026**
+### AI Faculty (8 Instructors)
+1. Dr. Nova Vale - Sexual Physiology & Body Science
+2. Coach Mira Sol - Self-Love, Shame Resilience & Somatic Practice
+3. Prof. Arden Moss - Consent, Communication & Relational Ethics
+4. Dr. Elise Hart - Shared Pleasure & Partnered Practice
+5. Dr. Sera Quinn - Identity, Diversity & Intersectional Intimacy
+6. Kai Voss - Kink, Power Dynamics & Edge Exploration
+7. Talia Rhine - Digital Intimacy, Ethics & Online Safety
+8. Prof. Jun Hart - Media Literacy, Lifelong Intimacy & Mastery
 
-### Backend (FastAPI + MongoDB)
-- [x] User authentication (register, login, JWT tokens)
-- [x] 10 course levels with 50 lessons each (500 total)
-- [x] 8 AI instructors with personalities & teaching styles
-- [x] Lesson completion with XP tracking
-- [x] Sample lessons with content
-- [x] RESTful API with /api prefix
+### Technical Implementation
+- **Backend**: FastAPI + MongoDB with full CRUD, auth (JWT), progress tracking
+- **Frontend**: React with enhanced UI/UX (glass morphism, animations)
+- **Features**: Age verification (18+), AI Advisor (Sage), XP/badges, lesson completion
 
-### Frontend (React)
-- [x] Age verification gateway (18+)
-- [x] AI Student Advisor (Sage) chatbot
-- [x] Landing page with hero, features, pricing
-- [x] Course catalog with search/filter
-- [x] Course detail with lesson list
-- [x] User dashboard with XP, level, progress
-- [x] Auth modal (login/register)
-- [x] Responsive design
-
-### UI/UX Enhancements
-- [x] Glass morphism design system
-- [x] Gradient animations
-- [x] Stagger animations for elements
-- [x] Shimmer loading effects
-- [x] Modern button hover states
-- [x] Custom scrollbar styling
-- [x] Reduced motion support
-- [x] High contrast mode support
+### Subscription Tiers
+- Free ($0) - Level 1 access (7 lessons)
+- Premium ($24.99/mo) - All content (28 lessons)
+- Elite ($64.99/mo) - Premium + coaching + encyclopedia
 
 ## Prioritized Backlog
 
-### P0 (Critical)
-- [ ] Full lesson content for all 500 lessons
-- [ ] AI instructor chat integration (actual AI responses)
-- [ ] Payment integration for subscriptions
-
-### P1 (High Priority)
-- [ ] Interactive simulations
-- [ ] Progress persistence across sessions
-- [ ] Certificate generation
+### P0 (Critical for Launch)
+- [ ] Payment integration (Stripe)
+- [ ] AI Faculty chat (LLM integration)
 - [ ] Email verification
 
-### P2 (Medium Priority)
+### P1 (High Priority)
+- [ ] A-Z Encyclopedia integration
 - [ ] Community forums
+- [ ] Certificate generation
+
+### P2 (Medium Priority)
+- [ ] Interactive simulations
 - [ ] Partner/couples accounts
-- [ ] Mobile app
-- [ ] Advanced analytics
+- [ ] Mobile optimization
 
 ## Next Tasks
-1. Integrate payment processing (Stripe) for subscriptions
-2. Add actual AI chat with instructors using LLM integration
-3. Expand lesson content database
-4. Add interactive simulations/scenarios
-5. Implement email notifications
+1. Integrate Stripe for subscription payments
+2. Add real AI chat with faculty using LLM
+3. Build A-Z Encyclopedia module
+4. Add community features
