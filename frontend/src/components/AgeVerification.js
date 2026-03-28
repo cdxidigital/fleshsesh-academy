@@ -29,11 +29,13 @@ const AgeVerification = ({ onVerified }) => {
             <div className="max-w-lg w-full text-center">
                 {/* Logo */}
                 <div className="mb-8">
-                    <img 
-                        src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/3848ji5y_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview_transparent.png"
-                        alt="Fleshsesh Academy"
-                        className="h-32 mx-auto"
-                    />
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 inline-block border border-white/10">
+                        <img 
+                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                            alt="Fleshsesh Academy"
+                            className="h-20 mx-auto rounded-lg"
+                        />
+                    </div>
                 </div>
 
                 {/* Warning Card */}

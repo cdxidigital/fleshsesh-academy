@@ -32,17 +32,21 @@ const Header = () => {
                         {/* Logo */}
                         <Link to="/" className="flex items-center" data-testid="logo-link">
                             {/* Icon for mobile */}
-                            <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/d0c4rw6h_e7348727-7e42-401a-8939-9def0983e0a3-removebg-preview_transparent.png"
-                                alt="Fleshsesh Academy"
-                                className="h-12 w-12 object-contain md:hidden"
-                            />
+                            <div className="bg-white/5 rounded-lg p-1.5 md:hidden">
+                                <img 
+                                    src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/0oflvhi0_e7348727-7e42-401a-8939-9def0983e0a3.jpg"
+                                    alt="Fleshsesh Academy"
+                                    className="h-8 w-8 object-contain rounded"
+                                />
+                            </div>
                             {/* Full logo for desktop */}
-                            <img 
-                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/3848ji5y_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview_transparent.png"
-                                alt="Fleshsesh Academy"
-                                className="h-12 object-contain hidden md:block"
-                            />
+                            <div className="bg-white/5 rounded-lg px-3 py-1.5 hidden md:block">
+                                <img 
+                                    src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                                    alt="Fleshsesh Academy"
+                                    className="h-8 object-contain rounded"
+                                />
+                            </div>
                         </Link>
 
                         {/* Desktop Navigation */}

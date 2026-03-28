@@ -119,11 +119,13 @@ const LandingPage = () => {
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center">
                     {/* Hero Logo */}
                     <div className="flex flex-col items-center mb-8">
-                        <img 
-                            src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/3848ji5y_82bcdafd-9834-4c0f-b899-cc5eb2810f81-removebg-preview_transparent.png"
-                            alt="Fleshsesh Academy"
-                            className="h-32 md:h-44 object-contain"
-                        />
+                        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                            <img 
+                                src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/8iwd4um5_82bcdafd-9834-4c0f-b899-cc5eb2810f81.jpg"
+                                alt="Fleshsesh Academy"
+                                className="h-24 md:h-32 object-contain rounded-lg"
+                            />
+                        </div>
                     </div>
 
                     <div className="inline-flex items-center gap-2 bg-[#E6005C]/10 border border-[#E6005C]/30 rounded-full px-4 py-2 mb-8">
