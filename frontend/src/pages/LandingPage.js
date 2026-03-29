@@ -116,14 +116,14 @@ const LandingPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#09050A]/50 via-transparent to-[#09050A]" />
                 <div className="absolute inset-0 hero-gradient" />
                 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center">
-                    {/* Hero Logo */}
-                    <div className="flex flex-col items-center mb-8">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center">
+                    {/* Hero Logo - BIG Welcome Style */}
+                    <div className="flex flex-col items-center mb-6">
                         <img 
                             src="https://customer-assets.emergentagent.com/job_body-training-lab/artifacts/p06q5ekn_Untitled%20design.png"
                             alt="Fleshsesh Academy"
-                            className="h-36 sm:h-44 md:h-52 lg:h-60 object-contain"
-                            style={{ filter: 'drop-shadow(0 0 40px rgba(230, 0, 92, 0.4))' }}
+                            className="h-48 sm:h-64 md:h-80 lg:h-96 object-contain"
+                            style={{ filter: 'drop-shadow(0 0 60px rgba(230, 0, 92, 0.5))' }}
                         />
                     </div>
 

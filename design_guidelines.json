@@ -1,111 +1,105 @@
 {
-  "theme": "dark",
-  "archetype": "Archetype 5 (Jewel & Luxury) mixed with subtle Neon",
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy) blended with 5 (Jewel & Luxury)",
+  "vibe": "Sophisticated, warm, inviting, educational, high-end wellness spa. NOT clinical, explicit, or cheap.",
+  "colors": {
+    "background": {
+      "base": "#FDFBF7",
+      "surface": "#FFFFFF",
+      "glass": "bg-white/70 backdrop-blur-2xl"
+    },
+    "text": {
+      "primary": "#2A1B2E",
+      "secondary": "#5C4A61",
+      "muted": "#8A7E8F"
+    },
+    "primary": {
+      "DEFAULT": "#9A3555",
+      "hover": "#7A2A44",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#F4E1E6",
+      "hover": "#EED0D9",
+      "foreground": "#2A1B2E"
+    },
+    "border": "#E8E0E5"
+  },
   "typography": {
-    "heading_font": "Outfit",
-    "body_font": "IBM Plex Sans",
-    "scale": {
-      "h1": "text-5xl sm:text-6xl tracking-tight font-bold",
-      "h2": "text-4xl sm:text-5xl tracking-tight font-bold",
-      "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
-      "h4": "text-xl font-semibold",
-      "body": "text-base leading-relaxed",
-      "small": "text-sm",
-      "overline": "text-xs uppercase tracking-[0.2em] font-medium"
+    "fonts_to_import": ["Playfair Display", "Outfit"],
+    "headings": {
+      "fontFamily": "Playfair Display, serif",
+      "weights": ["400", "500", "600"],
+      "tracking": "tracking-tight"
+    },
+    "body": {
+      "fontFamily": "Outfit, sans-serif",
+      "weights": ["300", "400", "500"]
+    },
+    "labels": {
+      "style": "uppercase tracking-[0.2em] text-xs font-medium"
     }
   },
-  "colors": {
-    "background": "#09050A",
-    "foreground": "#FFFFFF",
-    "card": "#140C16",
-    "card_foreground": "#FFFFFF",
-    "popover": "#140C16",
-    "popover_foreground": "#FFFFFF",
-    "primary": "#E6005C",
-    "primary_foreground": "#FFFFFF",
-    "secondary": "#7A0033",
-    "secondary_foreground": "#FFFFFF",
-    "muted": "#2E1E31",
-    "muted_foreground": "#A699A8",
-    "accent": "#FFB3D1",
-    "accent_foreground": "#140C16",
-    "destructive": "#FF3B30",
-    "destructive_foreground": "#FFFFFF",
-    "border": "#2E1E31",
-    "input": "#2E1E31",
-    "ring": "#E6005C"
-  },
-  "layout": {
-    "spacing_scale": "generous",
-    "container_padding": "p-8 md:p-12",
-    "grid_strategy": {
-      "marketing": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
-      "dashboard": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
-    },
-    "border_radius": "rounded-2xl"
-  },
-  "surfaces": {
-    "header": "backdrop-blur-xl bg-[#09050A]/70 border-b border-white/10",
-    "cards": "bg-[#140C16] border border-[#2E1E31] hover:-translate-y-1 transition-transform duration-300",
-    "pricing_cards": "relative overflow-hidden bg-[#140C16] border border-[#2E1E31]"
-  },
-  "motion": {
-    "hover": "transition-all duration-300 ease-in-out",
-    "active": "active:scale-95"
-  },
-  "media": {
-    "logos": {
-      "full": "https://customer-assets.emergentagent.com/job_af07beda-3c09-4f9a-bec6-bdb12e8e955b/artifacts/6t80lhv8_Gemini_Generated_Image_1qlo0c1qlo0c1qlo-removebg-preview.png",
-      "icon": "https://customer-assets.emergentagent.com/job_af07beda-3c09-4f9a-bec6-bdb12e8e955b/artifacts/f8j8ftyh_Gemini_Generated_Image_ri5c9vri5c9vri5c-removebg-preview.png"
-    },
-    "images": [
-      {
-        "category": "hero_background",
-        "url": "https://images.pexels.com/photos/1910229/pexels-photo-1910229.jpeg",
-        "description": "Dynamic abstract art with vibrant light streaks in pink and blue on a black background"
-      },
-      {
-        "category": "instructor_marcus",
-        "url": "https://images.pexels.com/photos/730229/pexels-photo-730229.jpeg",
-        "description": "Portrait of a handsome man in a coat indoors with creative lighting"
-      },
-      {
-        "category": "instructor_nyx",
-        "url": "https://images.pexels.com/photos/6939222/pexels-photo-6939222.jpeg",
-        "description": "Bold studio portrait of a woman in leather with chain jewelry and dramatic lighting"
-      },
-      {
-        "category": "instructor_aria",
-        "url": "https://images.unsplash.com/photo-1770062422093-ae32c8fed2a3",
-        "description": "Woman in sequined jacket, elegant and warm"
-      },
-      {
-        "category": "course_intimacy",
-        "url": "https://images.pexels.com/photos/7693666/pexels-photo-7693666.jpeg",
-        "description": "Emotive portrait of a glitter-covered couple expressing intimacy"
-      },
-      {
-        "category": "course_connection",
-        "url": "https://images.pexels.com/photos/7719000/pexels-photo-7719000.jpeg",
-        "description": "Close-up of a couple sharing a romantic moment with rainbow light shadows"
-      }
-    ]
+  "spacing": {
+    "philosophy": "Generous Spacing Philosophy (p-6, p-8, p-12, p-24) to emulate a premium wellness spa.",
+    "bento_grid": "Wide gaps (gap-8 to gap-12) for courses, tight gaps (gap-4) for dashboard widgets."
   },
   "components": {
-    "buttons": "rounded-full font-semibold px-8 py-3",
-    "inputs": "bg-[#09050A] border-[#2E1E31] rounded-lg focus:ring-2 focus:ring-[#E6005C]"
+    "cards": {
+      "style": "bg-white border border-[#E8E0E5] rounded-2xl shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300",
+      "padding": "p-8"
+    },
+    "buttons": {
+      "primary": "bg-[#9A3555] text-white rounded-full px-8 py-3 hover:bg-[#7A2A44] transition-colors shadow-sm",
+      "secondary": "bg-[#F4E1E6] text-[#2A1B2E] rounded-full px-8 py-3 hover:bg-[#EED0D9] transition-colors"
+    },
+    "header": {
+      "style": "sticky top-0 z-50 bg-white/70 backdrop-blur-2xl border-b border-[#E8E0E5]/50"
+    }
   },
-  "instructions_to_main_agent": [
-    "Build a hybrid fullstack application (marketing pages + dashboard)",
-    "Implement the landing page with Hero, Courses Overview, AI Instructors, Pricing, and a clear call to action.",
-    "Implement the learning dashboard for authenticated users to view courses, levels, and XP/tokens.",
-    "Use 'Outfit' for all headings and 'IBM Plex Sans' for body text. Load them from Google Fonts.",
-    "Follow the specified dark theme with deep plum (#09050A base) and electric neon pink (#E6005C) accents.",
-    "Ensure the hero section uses the hero_background image with a dark gradient overlay (e.g., bg-black/60) to maintain text readability.",
-    "Instructors (Marcus, Nyx, Aria) should be showcased in a bento grid or stylized card layout using the provided instructor images.",
-    "Course thumbnails should use the connection and intimacy images.",
-    "Use Lucide React or Radix UI icons for UI elements.",
-    "Use generic shadcn components where needed (e.g., for forms, tabs in dashboard), but style them according to the color tokens.",
-    "Ensure all interactive elements have data-testid attributes for testing."
-  ]
+  "media": {
+    "images": {
+      "hero_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/af07beda-3c09-4f9a-bec6-bdb12e8e955b/images/4319e2059adb213d6ebf1798e98fa64c52260f58d3f5a2bf6bd4ff5f222f128d.png",
+        "description": "Abstract elegant 3D composition, soft flowing silk fabrics in blush pink and deep plum, for hero banner or age verification gateway background."
+      },
+      "ai_advisor_sage": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/af07beda-3c09-4f9a-bec6-bdb12e8e955b/images/408b3fc18a85f2e8d48184c19d315a0fc218ff448a1baee82e181580a2ebba79.png",
+        "description": "Abstract glowing orb representing Sage the AI Advisor, use in chat widget."
+      },
+      "course_level_1": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/af07beda-3c09-4f9a-bec6-bdb12e8e955b/images/c187724516d5e5c354dce18ea5e05cefdfa2d425ac127a6be2aca1d4b81701fd.png",
+        "description": "Level 1: Self-intimacy image. Minimalist still life stones."
+      },
+      "course_level_2": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/af07beda-3c09-4f9a-bec6-bdb12e8e955b/images/a75b14a60705a24e9e38a9dc9f2479c2e131c07b168217a1743401e3a2b0cfc9.png",
+        "description": "Level 2: Connected intimacy. Intertwining leaves."
+      },
+      "course_level_3": {
+        "url": "https://images.unsplash.com/photo-1699535769866-7f195457a90a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHx3ZWxsbmVzcyUyMHNwYSUyMGZhY2V8ZW58MHx8fHwxNzc0NzY5Mzc2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Level 3: Diverse Intimacy. Amethysts and spa objects."
+      },
+      "course_level_4": {
+        "url": "https://images.unsplash.com/photo-1768245076274-7b27edbfc7c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHNwYSUyMGFic3RyYWN0fGVufDB8fHx8MTc3NDc2OTM2NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Level 4: Advanced Intimacy. Shallow water reflection."
+      },
+      "faculty_1": {
+        "url": "https://images.pexels.com/photos/4970379/pexels-photo-4970379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "AI Faculty Member Portrait"
+      },
+      "faculty_2": {
+        "url": "https://images.pexels.com/photos/36017685/pexels-photo-36017685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "AI Faculty Member Portrait"
+      }
+    }
+  },
+  "instructions_to_main_agent": {
+    "fonts": "Import Playfair Display and Outfit from Google Fonts.",
+    "age_verification": "Create a sophisticated, serene full-screen overlay (using the hero_background image with a blur). Don't make it look like a harsh warning; frame it as 'A space for adult exploration. Please confirm you are 18+'.",
+    "landing_page": "Use large elegant Playfair Display for the 'WELCOME TO THE ACADEMY' hero. Overlay max bg-white/30 on the hero image so text remains clear.",
+    "courses_grid": "Use a Bento Grid layout for the 4 levels. E.g., Self-Intimacy gets a large span, others smaller. Include the provided course images.",
+    "dashboard": "Use a soft, card-based layout with rounded-2xl and soft shadows. Include a progress circle or soft progress bars.",
+    "ai_advisor": "Place the 'Sage' floating orb widget fixed at the bottom right. Use backdrop-blur and glassmorphism for the chat panel.",
+    "icons": "Use lucide-react with thin, elegant stroke widths (strokeWidth={1.5})."
+  }
 }
